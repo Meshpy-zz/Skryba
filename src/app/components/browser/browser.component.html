@@ -1,5 +1,67 @@
 <!--Ekran 3-->
 
-<p>
-  browser works!
-</p>
+<app-home-navbar></app-home-navbar>
+
+<div class="container-fluid">
+
+  <div class="browser">
+    <input class="form-control mr-sm-2" type="search" placeholder="Wpisz frazę" aria-label="Search">
+    <div class="form-group filter">
+      <label for="exampleFormControlSelect1">Wybierz filtr</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>Autor</option>
+        <option>Rok publikacji</option>
+        <option>Tytuł</option>
+        <option>Czasopismo</option>
+        <option>Nazwa</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary center">Wyszukaj</button>
+  </div>
+
+  <div class="publications-table">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Numer</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Tytuł</th>
+        <th scope="col">Rok publikacji</th>
+        <th scope="col">Czasopismo</th>
+        <th scope="col">Liczba punktów</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Jan Kowalski</td>
+        <td>Pierwsza nazwa</td>
+        <td>Pierwszy tytuł</td>
+        <td>2003</td>
+        <td>Pierwsze czasopismo</td>
+        <td>29/32</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Anna Nowak</td>
+        <td>Druga nazwa</td>
+        <td>Drugi tytuł</td>
+        <td>2006</td>
+        <td>Drugie czasopismo</td>
+        <td>32/32</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Mariusz Nowacki</td>
+        <td>Trzecia nazwa</td>
+        <td>Trzeci tytuł</td>
+        <td>2009</td>
+        <td>Trzecie czasopismo</td>
+        <td>32/32</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+.publications-table {
+  margin-top: 50px;
+}
+
+.browser {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
