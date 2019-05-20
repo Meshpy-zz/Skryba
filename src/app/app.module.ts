@@ -22,7 +22,7 @@ import { AddFileComponent } from './components/add-file/add-file.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
