@@ -11,7 +11,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { AddFileComponent } from './components/add-file/add-file.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {ToastrModule} from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [

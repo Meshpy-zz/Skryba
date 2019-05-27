@@ -9,18 +9,43 @@
 
   <div id="content">
     <div class="text-center">
-        <div class="form-group">
-          <label for="emailInput">Adres e-mail</label>
-          <input #emailInput type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Wprowadź adres e-mail">
-          <small id="emailHelp" class="form-text text-muted">Maksymalnie 30 znaków.</small>
-        </div>
-        <div class="form-group">
-          <label for="passwordInput">Hasło</label>
-          <input #passwordInput type="password" class="form-control" id="passwordInput" placeholder="Wprowadź hało">
-        </div>
-        <button class="btn btn-primary" (click)="loginUser(emailInput, passwordInput)">Zaloguj się</button>
+      <div class="form-group">
+        <label for="emailInput">Adres e-mail</label>
+        <input
+          #emailInput
+          type="email"
+          class="form-control"
+          id="emailInput"
+          aria-describedby="emailHelp"
+          placeholder="Wprowadź adres e-mail"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >Maksymalnie 30 znaków.</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="passwordInput">Hasło</label>
+        <input
+          #passwordInput
+          type="password"
+          class="form-control"
+          id="passwordInput"
+          placeholder="Wprowadź hasło"
+        />
+      </div>
+      <button
+        class="btn btn-primary"
+        (click)="loginUser(emailInput, passwordInput)"
+      >
+        Zaloguj się
+      </button>
     </div>
   </div>
 </div>
 
-<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+<div class="background-spinner" *ngIf="isVisible">
+  <mat-progress-spinner
+    class="spinner"
+    mode="indeterminate"
+  ></mat-progress-spinner>
+</div>
