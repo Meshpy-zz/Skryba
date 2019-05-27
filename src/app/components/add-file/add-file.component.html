@@ -2,7 +2,7 @@
 
 <app-user-navbar></app-user-navbar>
 
-<div class="container-fluid" [@fadeIn]>
+<div *ngIf="sessionService.loggedIn" class="container-fluid" [@fadeIn]>
   <div class="text-center">
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Wklej tekst publikacji do parsowania</label>

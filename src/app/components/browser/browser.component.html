@@ -1,6 +1,7 @@
 <!--Ekran 3-->
 
-<app-home-navbar></app-home-navbar>
+<app-home-navbar *ngIf="!sessionService.loggedIn"></app-home-navbar>
+<app-user-navbar *ngIf="sessionService.loggedIn"></app-user-navbar>
 
 <div class="container-fluid" [@fadeIn]>
 

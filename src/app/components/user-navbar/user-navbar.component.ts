@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {SessionService} from '../../services/session.service';
+import {Router} from '@angular/router';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-navbar',
@@ -16,9 +19,14 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class UserNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sessionService: SessionService, private router: Router, private toastrService: ToastrService) { }
 
   ngOnInit() {
   }
 
+  logout(): void {
+    this.sessionService.removeSession();
+    this.toastrService.success('Zostałeś wylogowany pomyślnie!', 'Autoryzacja');
+    this.router.navigate(['/home']);
+  }
 }
