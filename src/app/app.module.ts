@@ -9,7 +9,8 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
 import { BrowserComponent } from './components/browser/browser.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AddFileComponent } from './components/add-file/add-file.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
@@ -26,9 +27,10 @@ import {ToastrModule} from 'ngx-toastr';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MatProgressSpinnerModule,
     ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
