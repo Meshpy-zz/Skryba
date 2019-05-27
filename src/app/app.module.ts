@@ -9,6 +9,7 @@ import { UserNavbarComponent } from './components/user-navbar/user-navbar.compon
 import { BrowserComponent } from './components/browser/browser.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AddFileComponent } from './components/add-file/add-file.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddFileComponent } from './components/add-file/add-file.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
