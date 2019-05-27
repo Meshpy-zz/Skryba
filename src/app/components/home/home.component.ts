@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {User} from '../../models/user';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +18,22 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  adminUser: User;
+  test: string;
+
+  constructor(private router: Router) {
+    this.adminUser = new User('admin@admin.pl', 'admin');
+  }
 
   ngOnInit() {
+  }
+
+  loginUser(emailInput, passwordInput): void {
+    if (emailInput.value === this.adminUser.email && passwordInput.value === this.adminUser.password) {
+      this.router.navigate(['/main']);
+    } else {
+      console.log('not validated');
+    }
   }
 
 }
