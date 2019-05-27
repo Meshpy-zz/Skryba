@@ -3,9 +3,8 @@
 <app-home-navbar></app-home-navbar>
 
 <div class="container-fluid" [@fadeIn]>
-
   <div class="logo">
-    <img class="logo-img" src="assets/img/LOGO.png">
+    <img class="logo-img" src="assets/img/LOGO.png" />
   </div>
 
   <div id="content">
@@ -13,15 +12,32 @@
       <form class="center-form">
         <div class="form-group">
           <label for="exampleInputEmail1">Adres e-mail</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wprowadź adres e-mail">
-          <small id="emailHelp" class="form-text text-muted">Maksymalnie 30 znaków.</small>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Wprowadź adres e-mail"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Maksymalnie 30 znaków.</small
+          >
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Hasło</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Wprowadź hało">
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Wprowadź hało"
+          />
         </div>
-        <button type="submit" class="btn btn-primary" routerLink="/main">Zaloguj się</button>
+        <button type="submit" class="btn btn-primary" routerLink="/main">
+          Zaloguj się
+        </button>
       </form>
     </div>
   </div>
 </div>
+
+<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
