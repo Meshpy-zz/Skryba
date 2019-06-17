@@ -34,33 +34,15 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Jan Kowalski</td>
-        <td>Pierwsza nazwa</td>
-        <td>Pierwszy tytuł</td>
-        <td>2003</td>
-        <td>Pierwsze czasopismo</td>
-        <td>29/32</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Anna Nowak</td>
-        <td>Druga nazwa</td>
-        <td>Drugi tytuł</td>
-        <td>2006</td>
-        <td>Drugie czasopismo</td>
-        <td>32/32</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Mariusz Nowacki</td>
-        <td>Trzecia nazwa</td>
-        <td>Trzeci tytuł</td>
-        <td>2009</td>
-        <td>Trzecie czasopismo</td>
-        <td>32/32</td>
-      </tr>
+        <tr *ngFor="let publication of publications">
+          <td>{{publication.id}}</td>
+          <td>{{publication.author}}</td>
+          <td>{{publication.name}}</td>
+          <td>{{publication.title}}</td>
+          <td>{{publication.publicationYear}}</td>
+          <td>{{publication.magazine}}</td>
+          <td>{{publication.points}}</td>
+        </tr>
       </tbody>
     </table>
   </div>
