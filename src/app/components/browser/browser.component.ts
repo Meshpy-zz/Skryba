@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {SessionService} from '../../services/session.service';
+import {PublicationsService} from '../../services/publications.service';
+import {Publication} from '../../models/publication';
 
 @Component({
   selector: 'app-browser',
@@ -17,9 +19,19 @@ import {SessionService} from '../../services/session.service';
 })
 export class BrowserComponent implements OnInit {
 
-  constructor(private sessionService: SessionService) { }
+  publications: Publication[] = [];
+  mockPublication: Publication;
+
+  constructor(private sessionService: SessionService, private publicationService: PublicationsService) {
+  }
 
   ngOnInit() {
+    this.getPublications();
+  }
+
+  getPublications(): void {
+    this.publicationService.getPublications()
+      .subscribe(publications => this.publications = publications);
   }
 
 }

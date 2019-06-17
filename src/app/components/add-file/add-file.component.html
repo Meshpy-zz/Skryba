@@ -12,16 +12,12 @@
         >AUTOR / NAZWA / TYTUŁ / ROK PUBLIKACJI / CZASOPISMO / LICZBA
         PUNKTÓW</label
       >
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
+      <label for="exampleFormControlTextarea1">Wklej tekst publikacji do parsowania</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #textFromArea></textarea>
     </div>
 
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-success">Wyślij</button>
-      <button type="button" class="btn btn-danger">Waliduj</button>
+      <button type="button" class="btn btn-success" (click)="addPublication(textFromArea.value)">Wyślij</button>
     </div>
   </div>
 </div>
