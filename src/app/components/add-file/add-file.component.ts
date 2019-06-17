@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {SessionService} from '../../services/session.service';
 
 @Component({
   selector: 'app-add-file',
@@ -16,7 +17,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class AddFileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sessionService: SessionService) { }
 
   ngOnInit() {
   }

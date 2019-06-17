@@ -1,6 +1,7 @@
 <!--Ekran 3-->
 
-<app-home-navbar></app-home-navbar>
+<app-home-navbar *ngIf="!sessionService.loggedIn"></app-home-navbar>
+<app-user-navbar *ngIf="sessionService.loggedIn"></app-user-navbar>
 
 <div class="container-fluid" [@fadeIn]>
 
@@ -19,7 +20,7 @@
     <button type="button" class="btn btn-primary center">Wyszukaj</button>
   </div>
 
-  <div class="publications-table">
+  <div class="publications-table" style="background-color: white">
     <table class="table table-striped">
       <thead>
       <tr>

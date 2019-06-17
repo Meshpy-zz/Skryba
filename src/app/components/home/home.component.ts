@@ -10,6 +10,7 @@ import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import {SessionService} from '../../services/session.service';
 
 @Component({
   selector: 'app-home',
@@ -29,11 +30,10 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 })
 export class HomeComponent implements OnInit {
   adminUser: User;
-  test: string;
   spinner: MatProgressSpinner;
   isVisible: boolean;
 
-  constructor(private router: Router, private toastrService: ToastrService) {
+  constructor(private router: Router, private toastrService: ToastrService, private sessionService: SessionService) {
     this.adminUser = new User('admin@admin.pl', 'admin');
     this.isVisible = false;
   }
@@ -45,6 +45,7 @@ export class HomeComponent implements OnInit {
       emailInput.value === this.adminUser.email &&
       passwordInput.value === this.adminUser.password
     ) {
+      this.sessionService.createSession();
       this.startLoadingSpinner();
     } else {
       this.toastrService.error('Podałeś złe dane autoryzacyjne!', 'Błąd!');
